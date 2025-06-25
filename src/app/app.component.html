@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="app.component.scss">
+<main class="main">
+    <div class="content">
+        <div class="meta">
+            <h1>Height Watchers Dashboard</h1>
+            <app-current-bridge-location></app-current-bridge-location>
+            <app-prevented-incidents></app-prevented-incidents>
+        </div>
+        <div class="map">
+            <img src="/assets/karte.png" alt="Map of the bridge location" width="500px"/>
+        </div>
+        <div class="sensors">
+            <h2>Current sensor data:</h2>
+            <div>
+                <div>
+                    <h3>Vehicle Detector</h3>
+                    <app-vehicle-generator (vehicleCrashedWithBridgeEvent)="bridgeCrash($event)" (vehicleCrashedWithBridgePreventedEvent)="bridgeCrashPrevented($event)"></app-vehicle-generator>
+                </div>
+                <div class="sensor-data-container">
+                    <app-current-sensor-data [vehicleCrashWithBridgePrevented]="bridgeCrashPreventedHappened"></app-current-sensor-data>
+                    <app-current-sensor-data [vehicleCrashWithBridge]="bridgeCrashHappened"></app-current-sensor-data>
+                </div>
+                <div>
+                </div>
+                <div>
+                    <h3>Process Flow</h3>
+                    <app-process-flow [vehicleCrashWithBridgePrevented]="bridgeCrashPreventedHappened" [vehicleCrashWithBridge]="bridgeCrashHappened"></app-process-flow>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<router-outlet/>

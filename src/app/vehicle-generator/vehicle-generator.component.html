@@ -1,0 +1,26 @@
+Acceleration m/s: {{ this.accelerationMeterPerSecond | number:'1.2-2' }}<br/>
+Velocity km/h: {{ this.velocityKmH | number:'1.2-2'}}<br/>
+Velocity km/h Max: {{ this.velocityKmHMax | number:'1.2-2'}}<br/>
+<hr/>
+Height of bridge in m: {{ this.bridgeHeight | number:'1.2-2'}}<br/>
+Height of vehicle in m: {{ this.vehicleHeight | number:'1.2-2'}}<br/>
+<hr/>
+Time passed in seconds: {{ this.timePassedInSeconds | number:'1.2-2'}}<br/>
+Distance to bridge in m: {{ this.distanceToBridgeInMeters | number:'1.2-2'}}<br/>
+
+
+@if (vehicleCrashedWithBridge) {
+    <span style="color:red">THIS VEHICLE CRASHED WITH THE BRIDGE</span>
+}
+
+@if (vehicleCrashedWithBridgePrevented) {
+    <span style="color:red">THIS VEHICLE NEARLY CRASHED WITH THE BRIDGE - BUT THE AWESOME HEIGHT WATCHERS PREVENTED IT</span>
+}
+
+@if (!vehicleCrashedWithBridge && !vehicleCrashedWithBridgePrevented && distanceToBridgeInMeters <= 0) {
+    <span style="color:green">This vehicle passed the bridge without any complications. Yay!</span>
+}
+
+@if (!vehicleCrashedWithBridge && !vehicleCrashedWithBridgePrevented && distanceToBridgeInMeters > 0) {
+    <span style="color:blue">Vehicle in motion</span>
+}

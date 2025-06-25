@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Globale Schriftgrößen-Einstellungen */
+html, body {
+  font-size: 18px; /* Basis-Schriftgröße von 18px statt Standard 16px */
+}
+
+/* Anpassung der relativen Schriftgrößen für verschiedene Elemente */
+h1 {
+  font-size: 2.5rem; /* 45px bei 18px Basis */
+}
+
+h2 {
+  font-size: 2rem; /* 36px bei 18px Basis */
+}
+
+h3 {
+  font-size: 1.75rem; /* 31.5px bei 18px Basis */
+}
+
+h4, h5, h6 {
+  font-size: 1.5rem; /* 27px bei 18px Basis */
+}
+
+p, div, span, li, a, button, input, textarea, select {
+  font-size: 1.1rem; /* 19.8px bei 18px Basis */
+}
+
+/* Erhöhte Zeilenhöhe für bessere Lesbarkeit */
+body {
+  line-height: 1.6;
+}

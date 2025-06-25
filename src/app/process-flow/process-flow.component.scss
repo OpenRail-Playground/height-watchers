@@ -1,0 +1,21 @@
+td {
+  border: 1px solid;
+  padding: 8px;
+  margin: 0 5px;
+  display: table-cell;
+  width: auto;
+  text-align: center;
+}
+
+tr {
+  display: table-row;
+  width: 100%;
+}
+
+table {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 5px;
+}

@@ -1,0 +1,12 @@
+<div class="traffic-light-container">
+    <h2>Traffic light status</h2>
+    <div class="traffic-light">
+        <div class="light red" [ngClass]="{'active': trafficLightState === 'red'}"></div>
+        <div class="light yellow" [ngClass]="{'active': trafficLightState === 'yellow'}"></div>
+        <div class="light green" [ngClass]="{'active': trafficLightState === 'green'}"></div>
+    </div>
+    <p class="status-text">Aktueller Status: <span class="status"
+                                                   [ngClass]="trafficLightState">{{ trafficLightState === 'red' ? 'Critical' : trafficLightState === 'yellow' ? 'Warning' : 'Normal' }}</span></p>
+    <span>Number of incidents: {{ this.incidentCounter }}</span>
+</div>
+
