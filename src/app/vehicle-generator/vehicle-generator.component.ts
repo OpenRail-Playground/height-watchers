@@ -1,4 +1,4 @@
-import {afterNextRender, afterRender, Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
 import {DecimalPipe} from '@angular/common';
 
 @Component({
@@ -45,9 +45,8 @@ export class VehicleGeneratorComponent implements OnInit, OnDestroy {
 
     this.startTime = Date.now();
 
-    afterRender(() => {
-      this.afterRender();
-    });
+    // Optionally, call afterRender directly if needed
+    this.afterRender();
   }
 
   ngOnInit(): void {
