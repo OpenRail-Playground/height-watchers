@@ -2,7 +2,9 @@
 
 A project to prevent bridge collisions before they happen and to take according measures when they still happen.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+This project is running with [Angular CLI](https://github.com/angular/angular-cli) version 20.0.4.
+
+It was generated using an older Angular version.
 
 ## Background
 
