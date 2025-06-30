@@ -2,11 +2,10 @@ import {Component, OnInit, OnDestroy, Input, OnChanges} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-current-sensor-data',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './signal.component.html',
-  styleUrl: './signal.component.scss'
+    selector: 'app-current-sensor-data',
+    imports: [CommonModule],
+    templateUrl: './signal.component.html',
+    styleUrl: './signal.component.scss'
 })
 export class SignalComponent implements OnInit, OnChanges {
   trafficLightState: 'red' | 'yellow' | 'green' = 'green';

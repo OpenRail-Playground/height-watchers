@@ -1,24 +1,50 @@
 @if (vehicleCrashWithBridgePrevented) {
-    <tr>
-        <td *ngIf="detectedOversize">Oversize vehicle detected</td>
-        <td *ngIf="trafficHalted">Signal switched to "halt"</td>
-        <td *ngIf="policeInformed">Police informed</td>
-        <td *ngIf="policePresent">Police at location</td>
-        <td *ngIf="policeReroute">Police rerouting traffic</td>
-    </tr>
+  <tr>
+    @if (detectedOversize) {
+      <td>Oversize vehicle detected</td>
+    }
+    @if (trafficHalted) {
+      <td>Signal switched to "halt"</td>
+    }
+    @if (policeInformed) {
+      <td>Police informed</td>
+    }
+    @if (policePresent) {
+      <td>Police at location</td>
+    }
+    @if (policeReroute) {
+      <td>Police rerouting traffic</td>
+    }
+  </tr>
 
 }
 
 @if (vehicleCrashWithBridge) {
-    <tr>
-        <td *ngIf="detectedOversize">Oversize vehicle detected</td>
-        <td *ngIf="trafficHalted">Signal switched to "halt"</td>
-        <td *ngIf="policeInformed">Police informed</td>
-        <td *ngIf="policePresent">Police at location</td>
-        <td *ngIf="policeMeasures">Police taking action</td>
-        <td *ngIf="emergencyManagerInformed">Emergency manager informed</td>
-        <td *ngIf="emergencyManagerPresent">Emergency manager at location</td>
-        <td *ngIf="alarmReleased">Police released alarm</td>
-    </tr>
+  <tr>
+    @if (detectedOversize) {
+      <td>Oversize vehicle detected</td>
+    }
+    @if (trafficHalted) {
+      <td>Signal switched to "halt"</td>
+    }
+    @if (policeInformed) {
+      <td>Police informed</td>
+    }
+    @if (policePresent) {
+      <td>Police at location</td>
+    }
+    @if (policeMeasures) {
+      <td>Police taking action</td>
+    }
+    @if (emergencyManagerInformed) {
+      <td>Emergency manager informed</td>
+    }
+    @if (emergencyManagerPresent) {
+      <td>Emergency manager at location</td>
+    }
+    @if (alarmReleased) {
+      <td>Police released alarm</td>
+    }
+  </tr>
 
 }

@@ -1,12 +1,9 @@
 import {Component, Input, OnChanges} from '@angular/core';
-import {NgIf} from '@angular/common';
+
 
 @Component({
     selector: 'app-process-flow',
-    standalone: true,
-    imports: [
-        NgIf
-    ],
+    imports: [],
     templateUrl: './process-flow.component.html',
     styleUrl: './process-flow.component.scss'
 })

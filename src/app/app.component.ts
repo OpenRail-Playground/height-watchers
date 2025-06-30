@@ -7,11 +7,10 @@ import {ProcessFlowComponent} from './process-flow/process-flow.component';
 import {VehicleGeneratorComponent} from './vehicle-generator/vehicle-generator.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, PreventedIncidentsComponent, CurrentBridgeLocationComponent, SignalComponent, ProcessFlowComponent, VehicleGeneratorComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    imports: [RouterOutlet, PreventedIncidentsComponent, CurrentBridgeLocationComponent, SignalComponent, ProcessFlowComponent, VehicleGeneratorComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'heightwatchers';

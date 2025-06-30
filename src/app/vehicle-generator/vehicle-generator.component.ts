@@ -2,13 +2,12 @@ import {afterNextRender, afterRender, Component, EventEmitter, OnDestroy, OnInit
 import {DecimalPipe} from '@angular/common';
 
 @Component({
-  selector: 'app-vehicle-generator',
-  standalone: true,
-  imports: [
-    DecimalPipe
-  ],
-  templateUrl: './vehicle-generator.component.html',
-  styleUrl: './vehicle-generator.component.scss'
+    selector: 'app-vehicle-generator',
+    imports: [
+        DecimalPipe
+    ],
+    templateUrl: './vehicle-generator.component.html',
+    styleUrl: './vehicle-generator.component.scss'
 })
 export class VehicleGeneratorComponent implements OnInit, OnDestroy {
   protected accelerationMeterPerSecond: number = 0.0;
