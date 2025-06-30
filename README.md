@@ -1,4 +1,4 @@
-# Heightwatchers
+# Height Watchers
 
 A project to prevent bridge collisions before they happen and to take according measures when they still happen.
 
