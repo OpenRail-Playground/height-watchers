@@ -1,50 +1,74 @@
 @if (vehicleCrashWithBridgePrevented) {
-  <tr>
-    @if (detectedOversize) {
-      <td>Oversize vehicle detected</td>
-    }
-    @if (trafficHalted) {
-      <td>Signal switched to "halt"</td>
-    }
-    @if (policeInformed) {
-      <td>Police informed</td>
-    }
-    @if (policePresent) {
-      <td>Police at location</td>
-    }
-    @if (policeReroute) {
-      <td>Police rerouting traffic</td>
-    }
-  </tr>
+
+@if (detectedOversize) {
+<div class="alert alert-danger" role="alert">
+  Oversize vehicle detected</div>
+}
+
+@if (trafficHalted) {
+<div class="alert alert-info" role="alert">
+  Traffic light set to "halt"</div>
+}
+
+@if (policeInformed) {
+<div class="alert alert-info" role="alert">
+  Police unit has been informed
+</div>
+}
+
+@if (policePresent) {
+<div class="alert alert-info" role="alert">
+  Police is now present on location</div>
+}
+
+@if (policeReroute) {
+<div class="alert alert-info" role="alert">
+  Police is now rerouting traffic
+</div>
+}
 
 }
 
 @if (vehicleCrashWithBridge) {
-  <tr>
-    @if (detectedOversize) {
-      <td>Oversize vehicle detected</td>
-    }
-    @if (trafficHalted) {
-      <td>Signal switched to "halt"</td>
-    }
-    @if (policeInformed) {
-      <td>Police informed</td>
-    }
-    @if (policePresent) {
-      <td>Police at location</td>
-    }
-    @if (policeMeasures) {
-      <td>Police taking action</td>
-    }
-    @if (emergencyManagerInformed) {
-      <td>Emergency manager informed</td>
-    }
-    @if (emergencyManagerPresent) {
-      <td>Emergency manager at location</td>
-    }
-    @if (alarmReleased) {
-      <td>Police released alarm</td>
-    }
-  </tr>
+@if (detectedOversize) {
+<div class="alert alert-danger" role="alert">
+  Oversize vehicle detected</div>
+}
 
+@if (trafficHalted) {
+<div class="alert alert-info" role="alert">
+  Traffic light set to "halt"</div>
+}
+
+@if (policeInformed) {
+<div class="alert alert-info" role="alert">
+  Police unit has been informed
+</div>
+}
+
+@if (policePresent) {
+<div class="alert alert-info" role="alert">
+  Police is now present on location</div>
+}
+
+@if (policeMeasures) {
+<div class="alert alert-info" role="alert">
+  Police now taking action</div>
+}
+
+@if (emergencyManagerInformed) {
+<div class="alert alert-info" role="alert">
+  Emergency manager informed</div>
+}
+
+@if (emergencyManagerPresent) {
+<div class="alert alert-info" role="alert">
+  Emergency manager on location</div>
+}
+
+@if (alarmReleased) {
+<div class="alert alert-success" role="alert">
+  Police released alarm
+</div>
+}
 }
