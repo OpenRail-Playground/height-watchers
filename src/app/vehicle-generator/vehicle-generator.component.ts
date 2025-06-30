@@ -1,14 +1,13 @@
-import {afterNextRender, afterRender, Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
 import {DecimalPipe} from '@angular/common';
 
 @Component({
-  selector: 'app-vehicle-generator',
-  standalone: true,
-  imports: [
-    DecimalPipe
-  ],
-  templateUrl: './vehicle-generator.component.html',
-  styleUrl: './vehicle-generator.component.scss'
+    selector: 'app-vehicle-generator',
+    imports: [
+        DecimalPipe
+    ],
+    templateUrl: './vehicle-generator.component.html',
+    styleUrl: './vehicle-generator.component.scss'
 })
 export class VehicleGeneratorComponent implements OnInit, OnDestroy {
   protected accelerationMeterPerSecond: number = 0.0;
@@ -46,9 +45,8 @@ export class VehicleGeneratorComponent implements OnInit, OnDestroy {
 
     this.startTime = Date.now();
 
-    afterRender(() => {
-      this.afterRender();
-    });
+    // Optionally, call afterRender directly if needed
+    this.afterRender();
   }
 
   ngOnInit(): void {
