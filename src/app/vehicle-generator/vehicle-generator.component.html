@@ -1,26 +1,56 @@
-Acceleration m/s: {{ this.accelerationMeterPerSecond | number:'1.2-2' }}<br/>
-Velocity km/h: {{ this.velocityKmH | number:'1.2-2'}}<br/>
-Velocity km/h Max: {{ this.velocityKmHMax | number:'1.2-2'}}<br/>
-<hr/>
-Height of bridge in m: {{ this.bridgeHeight | number:'1.2-2'}}<br/>
-Height of vehicle in m: {{ this.vehicleHeight | number:'1.2-2'}}<br/>
-<hr/>
-Time passed in seconds: {{ this.timePassedInSeconds | number:'1.2-2'}}<br/>
-Distance to bridge in m: {{ this.distanceToBridgeInMeters | number:'1.2-2'}}<br/>
+<div class="card">
+    <h4 class="card-title">Acceleration m/s</h4>
+    {{ this.accelerationMeterPerSecond | number:'1.2-2' }}
+</div>
+
+<div class="card">
+    <h4 class="card-title">Velocity km/h</h4>
+    {{ this.velocityKmH | number:'1.2-2'}}
+</div>
+
+<div class="card">
+    <h4 class="card-title">Velocity km/h max</h4>
+    {{ this.velocityKmHMax | number:'1.2-2'}}
+</div>
+
+<hr />
+
+<div class="card">
+    <h4 class="card-title"> Height of bridge in m</h4>
+    {{ this.bridgeHeight | number:'1.2-2'}}
+</div>
+
+<div class="card">
+    <h4 class="card-title"> Height of vehicle in m</h4>
+    {{ this.vehicleHeight | number:'1.2-2'}}
+</div>
+
+<hr />
+
+<div class="card">
+    <h4 class="card-title"> Time passed in seconds</h4>
+    {{ this.timePassedInSeconds | number:'1.2-2'}}
+</div>
+
+<div class="card">
+    <h4 class="card-title"> Distance to bridge in meters</h4>
+    {{ this.distanceToBridgeInMeters | number:'1.2-2'}}
+</div>
 
 
 @if (vehicleCrashedWithBridge) {
-    <span style="color:red">THIS VEHICLE CRASHED WITH THE BRIDGE</span>
+<span style="color:red">THIS VEHICLE CRASHED WITH THE BRIDGE</span>
 }
 
 @if (vehicleCrashedWithBridgePrevented) {
-    <span style="color:red">THIS VEHICLE NEARLY CRASHED WITH THE BRIDGE - BUT THE AWESOME HEIGHT WATCHERS PREVENTED IT</span>
+<span style="color:red">THIS VEHICLE NEARLY CRASHED WITH THE BRIDGE - BUT THE AWESOME HEIGHT WATCHERS PREVENTED
+    IT</span>
 }
 
-@if (!vehicleCrashedWithBridge && !vehicleCrashedWithBridgePrevented && distanceToBridgeInMeters <= 0) {
-    <span style="color:green">This vehicle passed the bridge without any complications. Yay!</span>
-}
+@if (!vehicleCrashedWithBridge && !vehicleCrashedWithBridgePrevented && distanceToBridgeInMeters <= 0) { <span
+    style="color:green">This vehicle passed the bridge without any complications. Yay!</span>
+    }
 
-@if (!vehicleCrashedWithBridge && !vehicleCrashedWithBridgePrevented && distanceToBridgeInMeters > 0) {
+    @if (!vehicleCrashedWithBridge && !vehicleCrashedWithBridgePrevented && distanceToBridgeInMeters > 0) {
     <span style="color:blue">Vehicle in motion</span>
-}
+    }
